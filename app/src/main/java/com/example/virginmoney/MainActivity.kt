@@ -30,5 +30,8 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        //use repository and create second page for details on clicking image
+        // also depency injection
     }
 }

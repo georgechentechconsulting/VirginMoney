@@ -22,12 +22,11 @@ class HomeFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var peopleAdapter: PeopleAdapter
-
+    private lateinit var homeViewModel: HomeViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -36,7 +35,6 @@ class HomeFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.recyclerViewPeople)
         recyclerView.layoutManager = LinearLayoutManager(context)
-
         RetrofitClient.apiService.getPeople().enqueue(object : Callback<List<Person>> {
             override fun onResponse(call: Call<List<Person>>, response: Response<List<Person>>) {
                 if (response.isSuccessful) {
@@ -47,8 +45,6 @@ class HomeFragment : Fragment() {
                         }
                         recyclerView.adapter = peopleAdapter
                     }
-                } else {
-                    // Handle the case where the response is not successful
                 }
             }
 

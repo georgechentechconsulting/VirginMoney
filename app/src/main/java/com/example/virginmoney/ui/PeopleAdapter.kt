@@ -38,7 +38,7 @@ class PeopleAdapter(
     override fun onBindViewHolder(holder: PersonViewHolder, position: Int) {
         val person = people[position]
         holder.nameTextView.text = person.name
-        Glide.with(holder.itemView.context).load(person.imageUrl).into(holder.imageView)
+        Glide.with(holder.itemView.context).load(person.avatar).placeholder(R.drawable.ic_launcher_background).into(holder.imageView)
     }
 
     override fun getItemCount() = people.size

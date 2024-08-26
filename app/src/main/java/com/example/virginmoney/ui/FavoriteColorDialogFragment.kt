@@ -1,5 +1,6 @@
 package com.example.virginmoney.ui
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import com.example.virginmoney.R
 
 class FavoriteColorDialogFragment(private val favoriteColor: String) : DialogFragment() {
 
+    @SuppressLint("SetTextI18n", "UseGetLayoutInflater")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState)
         val view = LayoutInflater.from(context).inflate(R.layout.favorite_color_popup, null)

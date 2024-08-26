@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VirginMoney</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="avatar">Avatar</string>
+    <string name="person_name">Person Name</string>
+</resources>
